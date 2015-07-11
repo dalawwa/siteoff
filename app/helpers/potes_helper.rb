@@ -1,0 +1,2 @@
+module PotesHelper
+end

@@ -1,0 +1,34 @@
+<%= form_for(@pote, multipart: true) do |f| %>
+  <% if @pote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pote.errors.count, "error") %> prohibited this pote from being saved:</h2>
+
+      <ul>
+      <% @pote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+   <div class="field">
+    <%= f.label :sex %><br>
+    <%= f.text_field :sex %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.text_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

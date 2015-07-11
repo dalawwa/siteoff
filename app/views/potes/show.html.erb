@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pote.name %>
+</p>
+
+<p>
+  <strong>Photo</strong>
+  <%= link_to "download avatar", @pote.avatar.url %>
+</p>
+
+<%= link_to 'Edit', edit_pote_path(@pote) %> |
+<%= link_to 'Back', potes_path %>
